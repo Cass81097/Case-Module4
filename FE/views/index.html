@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <!-- MyCSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/home/my-style.css">
+    <link rel="stylesheet" href="../assets/css/home/styles.css">
+
+    <title>Responsive website delivery</title>
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img class="logo" src="../assets/img/logo.png">
+                <span>Giaohangsieutoc</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">Trang chủ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">Về chúng tôi</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">Dịch vụ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Liên hệ</a>
+                    </li>
+
+                    <i class='bx bx-toggle-left change-theme' id="theme-button"></i>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-grid-alt'></i>
+            </div>
+
+            <a href="#" class="button button__header">Bắt đầu ngay!</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--=============== HOME ===============-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h1 class="home__title">Giao hàng <br> cực tiện cực nhanh</h1>
+                    <p class="home__description">Nhận giao hàng cực nhanh, cực tiết kiệm ngay hôm nay! Đảm bảo hàng đến
+                        tay bạn trong thời gian ngắn nhất và với mức giá vô cùng hợp lý. Hãy trải nghiệm dịch vụ giao
+                        hàng đỉnh cao của chúng tôi ngay
+                    </p>
+                    <a href="#" class="button">Bắt đầu ngay!</a>
+                </div>
+
+                <div class="col-sm-5 col-md-3">
+                    <div class="block block-signup"
+                        style="border-bottom: none; box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);">
+                        <div class="content text-center menu-ghtk">
+                            <a id='menu-item-17' href="./search.html" target="_blank"
+                                class="btn btn-ghtk ghtk-search"
+                                style="min-width: 100%; border-bottom: 2px solid #ccc;">
+                                <i class="fas fa-search"></i>
+                                <span>
+                                    Tra cứu đơn hàng
+                                </span>
+                            </a>
+                            <a href="sign.html" class="btn btn-ghtk ghtk-register"
+                                style="min-width: 100%; border-bottom: 2px solid #ccc;">
+                                <i class="fas fa-file-signature"></i>
+                                <span>
+                                    Đăng ký shop | Đăng nhập
+                                </span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== ABOUT ===============-->
+        <section class="section-ghtkpo shortcode-ghtkpo">
+            <div class="container">
+                <div class="row">
+                    <div class="hidden-xs col-sm-5 col-md-6">
+                        <img class="thumb-map-office"
+                            src="https://giaohangtietkiem.vn/wp-content/plugins/ghtk-post-offices/assets/img/list-post-offices.jpg"
+                            alt="map-office-img">
+                    </div>
+
+                    <div class="search-location col-xs-12 col-sm-7 col-md-6">
+                        <div class="search-post-offices">
+                            <div class="ghtkpo-search">
+                                <select name="list-all-provinces" id="ghtkpo-list-provinces">
+                                </select>
+                                <a href="#" class="btn btn-primary ghtkpo-btn-search">
+                                    <!-- <img class="search-icon" src="https://giaohangtietkiem.vn/wp-content/plugins/ghtk-post-offices/assets/img/icon-search.png" alt="icon-search"> -->
+                                    <span class="search-title">Tra cứu điểm gửi hàng</span></a>
+                            </div>
+                            <div class="list-post-offices">
+                                <h3 class="ghtk-po-title">Danh sách bưu cục</h3>
+                                <span class="close-list-po"></span>
+                                <ul id="show-post-office">
+                                </ul>
+                            </div>
+
+                            <div class="default-title">
+                                <div class="col-left">
+                                    <span class="big-text">1000++</span>
+                                </div>
+                                <div class="col-right">
+                                    <span class="text-before">điểm gửi hàng...</span>
+                                    <span class="text-after">...trên toàn quốc!!!</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!--=============== SECURITY ===============-->
+        <section id="widget_sp_image-2" class="section widget_sp_image"><img width="1920" height="120"
+                class="attachment-full" style="max-width: 100%;"
+                srcset="https://giaohangtietkiem.vn/wp-content/uploads/2021/10/image_mkt_30.png 1920w, https://giaohangtietkiem.vn/wp-content/uploads/2021/10/image_mkt_30-300x19.png 300w, https://giaohangtietkiem.vn/wp-content/uploads/2021/10/image_mkt_30-768x48.png 768w, https://giaohangtietkiem.vn/wp-content/uploads/2021/10/image_mkt_30-1024x64.png 1024w"
+                sizes="(max-width: 1920px) 100vw, 1920px"
+                src="https://giaohangtietkiem.vn/wp-content/uploads/2021/10/image_mkt_30.png" /></section>
+        <section id="text-2" class="section widget_text">
+            <div class="container">
+                <h3 class="section-title text-center">Phương thức hoạt động</h3>
+            </div>
+            <div class="textwidget">
+                <div class="grey-bg actives">
+                    <div class="container">
+                        <ul class="row">
+                            <li class="active-1">
+                                <strong>Tiếp nhận đơn hàng</strong>
+                                Shop đăng nhập và đăng đơn hàng cho trung tâm điều vận GHTK qua hệ thống quản lý riêng.
+                            </li>
+                            <li class="active-2">
+                                <strong>Lấy hàng</strong>
+                                Nhân viên GHTK qua địa chỉ shop để lấy hàng tận nơi
+                            </li>
+                            <li class="active-3">
+                                <strong>Giao hàng</strong>
+                                GHTK giao hàng cho khách hàng và thu hộ tiền trực tiếp (Cash on Delivery)
+                            </li>
+                            <li class="active-4">
+                                <strong>Đối soát</strong>
+                                GHTK đối soát trả tiền cho shop (3 lần/tuần) qua tài khoản ngân hàng. Đồng thời gửi biên
+                                bản đối soát định kì vào email.
+                            </li>
+                            <li class="active-5">
+                                <strong>Kết thúc</strong>
+                                Giao dịch hoàn thành
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">Giao hàng</a>
+                <p class="footer__description">Chuyển hàng cực nhanh, <br> dễ dàng</p>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Dịch vụ của chúng tôi</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Báo cáo lỗi</a></li>
+                    <li><a href="#" class="footer__link">Điều khoản dịch vụ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Công ty của chúng tôi</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Blog</a></li>
+                    <li><a href="#" class="footer__link">Nhiệm vụ</a></li>
+                    <li><a href="#" class="footer__link">Liên lạc</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Cộng động</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Hỗ trợ</a></li>
+                    <li><a href="#" class="footer__link">Hỏi đáp</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__social">
+                <a href="#" class="footer__social-link"><i class='bx bxl-facebook-circle '></i></a>
+                <a href="#" class="footer__social-link"><i class='bx bxl-twitter'></i></a>
+                <a href="#" class="footer__social-link"><i class='bx bxl-instagram-alt'></i></a>
+            </div>
+
+        </div>
+
+        <p class="footer__copy">Developed by HoangAnh-HoangHiep.</p>
+    </footer>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class='bx bx-up-arrow-alt scrollup__icon'></i>
+    </a>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
