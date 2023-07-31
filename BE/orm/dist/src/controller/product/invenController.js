@@ -26,6 +26,10 @@ class InvenController {
             let object = await this.service.findById(req.params.id);
             res.json(object);
         };
+        this.getAllPrdByStorehouse = async (req, res) => {
+            let object = await this.service.getAllPrdInStorehouse(req.params.id);
+            res.json(object);
+        };
         this.service = invenService_1.default;
     }
 }

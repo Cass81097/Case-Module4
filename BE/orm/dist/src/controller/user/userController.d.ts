@@ -2,6 +2,10 @@ import { Request, Response } from "express";
 declare class UserController {
     private service;
     constructor();
+    findAll: (req: Request, res: Response) => Promise<void>;
+    delete: (req: Request, res: Response) => Promise<void>;
+    update: (req: Request, res: Response) => Promise<void>;
+    findById: (req: Request, res: Response) => Promise<void>;
     register: (req: Request, res: Response) => Promise<void>;
     login: (req: Request, res: Response) => Promise<void>;
 }

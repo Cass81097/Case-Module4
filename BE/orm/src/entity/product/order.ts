@@ -1,6 +1,6 @@
 import {Column, Entity, PrimaryGeneratedColumn, ManyToOne} from "typeorm";
 import {Storehouse} from "./storehouse";
-import {InfoUser} from "../user/infoUser";
+import {User} from "../user/user";
 import {Inventory} from "./inventory";
 @Entity()
 export class Order {
@@ -18,8 +18,8 @@ export class Order {
     packingCost: number;
     @ManyToOne(() => Storehouse,(storeHouse) => storeHouse.id)
     storeHouse: Storehouse
-    @ManyToOne(() => InfoUser, (infoUser) => infoUser.id)
-    infoUser: InfoUser
+    @ManyToOne(() => User, (user) => user.id)
+    user: User
     @ManyToOne(() => Inventory, (inven) => inven.id)
     inventory: Inventory
 }

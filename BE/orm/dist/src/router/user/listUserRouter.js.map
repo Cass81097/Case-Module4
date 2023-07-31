@@ -1,1 +1,0 @@
-{"version":3,"file":"listUserRouter.js","sourceRoot":"","sources":["../../../../src/router/user/listUserRouter.ts"],"names":[],"mappings":";;;;;AAAA,qCAA+B;AAC/B,0FAAkE;AAElE,MAAM,cAAc,GAAG,IAAA,gBAAM,GAAE,CAAA;AAC/B,cAAc,CAAC,IAAI,CAAC,WAAW,EAAE,wBAAc,CAAC,QAAQ,CAAC,CAAC;AAC1D,cAAc,CAAC,IAAI,CAAC,QAAQ,EAAE,wBAAc,CAAC,KAAK,CAAC,CAAC;AACpD,kBAAe,cAAc,CAAA"}

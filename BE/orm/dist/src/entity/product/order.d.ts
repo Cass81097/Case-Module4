@@ -1,5 +1,5 @@
 import { Storehouse } from "./storehouse";
-import { InfoUser } from "../user/infoUser";
+import { User } from "../user/user";
 import { Inventory } from "./inventory";
 export declare class Order {
     id: number;
@@ -9,6 +9,6 @@ export declare class Order {
     shippingCost: number;
     packingCost: number;
     storeHouse: Storehouse;
-    infoUser: InfoUser;
+    user: User;
     inventory: Inventory;
 }

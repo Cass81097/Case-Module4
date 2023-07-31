@@ -30,5 +30,13 @@ class InvenService implements LogisticService<Inventory>{
     update = async (id, data) => {
         return await this.repository.update(id,data)
     }
+    getAllPrdInStorehouse = async (storehouseId) =>{
+        return await this.repository
+            .createQueryBuilder("inventory")
+            .leftJoinAndSelect("inventory.storeHouseId","storehouse")
+            .select(["inventory.id", "inventory.name", "inventory.costPrice", "inventory.quantity"])
+            .where("storehouse.id = :storeHouseId", {storehouseId})
+            .getMany()
+    }
 }
 export default new InvenService()

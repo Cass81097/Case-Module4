@@ -23,6 +23,46 @@ class OrderService {
         this.update = async (id, data) => {
             return await this.repository.update(id, data);
         };
+        this.getAllOrderByUserId = async (userId) => {
+            return this.repository
+                .createQueryBuilder("order")
+                .leftJoinAndSelect("order.user", "user")
+                .select([
+                "order.id",
+                "order.date",
+                "order.sellingPrice",
+                "order.quantity",
+                "order.shippingCost",
+                "order.packingCost",
+                "user.id",
+                "user.name",
+                "user.age",
+                "user.address",
+                "user.phone"
+            ])
+                .where("user.id = :userId", { userId })
+                .getMany();
+        };
+        this.getAllByAsc = async () => {
+            return this.repository.find({
+                relations: {
+                    user: true
+                },
+                order: {
+                    sellingPrice: "ASC"
+                }
+            });
+        };
+        this.getAllByDesc = async () => {
+            return this.repository.find({
+                relations: {
+                    user: true
+                },
+                order: {
+                    sellingPrice: "DESC"
+                }
+            });
+        };
         this.repository = data_source_1.AppDataSource.getRepository(order_1.Order);
     }
 }

@@ -7,6 +7,7 @@ const express_1 = require("express");
 const invenController_1 = __importDefault(require("../../controller/product/invenController"));
 const invenRouter = (0, express_1.Router)();
 invenRouter.get('/', invenController_1.default.findAll);
+invenRouter.get('/storehouse', invenController_1.default.getAllPrdByStorehouse);
 invenRouter.post('/', invenController_1.default.add);
 invenRouter.delete('/:id', invenController_1.default.delete);
 invenRouter.put('/:id', invenController_1.default.update);

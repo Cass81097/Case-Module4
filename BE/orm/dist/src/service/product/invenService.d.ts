@@ -8,6 +8,7 @@ declare class InvenService implements LogisticService<Inventory> {
     delete: (id: any) => Promise<any>;
     findById: (id: any) => Promise<any>;
     update: (id: any, data: any) => Promise<any>;
+    getAllPrdInStorehouse: (storehouseId: any) => Promise<any>;
 }
 declare const _default: InvenService;
 export default _default;

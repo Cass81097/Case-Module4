@@ -8,6 +8,9 @@ declare class OrderService implements LogisticService<Order> {
     delete: (id: any) => Promise<any>;
     findById: (id: any) => Promise<any>;
     update: (id: any, data: any) => Promise<any>;
+    getAllOrderByUserId: (userId: any) => Promise<any>;
+    getAllByAsc: () => Promise<any>;
+    getAllByDesc: () => Promise<any>;
 }
 declare const _default: OrderService;
 export default _default;

@@ -7,6 +7,7 @@ declare class InvenController {
     delete: (req: Request, res: Response) => Promise<void>;
     update: (req: Request, res: Response) => Promise<void>;
     findById: (req: Request, res: Response) => Promise<void>;
+    getAllPrdByStorehouse: (req: Request, res: Response) => Promise<void>;
 }
 declare const _default: InvenController;
 export default _default;

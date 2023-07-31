@@ -10,8 +10,8 @@ class InvenController{
     }
 
     findAll = async (req: Request, res: Response) => {
-        let object = await this.service.getAll();
-        res.json(object);
+            let object = await this.service.getAll();
+            res.json(object);
     }
     add = async (req: Request, res: Response) => {
         await this.service.add(req.body);
@@ -30,5 +30,9 @@ class InvenController{
         res.json(object)
     }
 
+    getAllPrdByStorehouse = async (req: Request, res: Response) => {
+        let object = await this.service.getAllPrdInStorehouse(req.params.id)
+        res.json(object)
+    }
 }
 export default new InvenController()

@@ -7,6 +7,7 @@ const express_1 = require("express");
 const orderController_1 = __importDefault(require("../../controller/product/orderController"));
 const orderRouter = (0, express_1.Router)();
 orderRouter.get('/', orderController_1.default.findAll);
+orderRouter.get('/user/:id', orderController_1.default.getAllOrderByUser);
 orderRouter.post('/', orderController_1.default.add);
 orderRouter.delete('/:id', orderController_1.default.delete);
 orderRouter.put('/:id', orderController_1.default.update);

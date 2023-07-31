@@ -7,6 +7,22 @@ const userService_1 = __importDefault(require("../../service/user/userService"))
 const session = require('express-session');
 class UserController {
     constructor() {
+        this.findAll = async (req, res) => {
+            let object = await this.service.getAll();
+            res.json(object);
+        };
+        this.delete = async (req, res) => {
+            await this.service.delete(req.params.id);
+            res.json('complete');
+        };
+        this.update = async (req, res) => {
+            let object = await this.service.update(req.params.id, req.body);
+            res.json(object);
+        };
+        this.findById = async (req, res) => {
+            let object = await this.service.findById(req.params.id);
+            res.json(object);
+        };
         this.register = async (req, res) => {
             await userService_1.default.register(req.body);
             res.status(201).json('Create user success');

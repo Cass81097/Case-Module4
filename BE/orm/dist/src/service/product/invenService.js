@@ -23,6 +23,14 @@ class InvenService {
         this.update = async (id, data) => {
             return await this.repository.update(id, data);
         };
+        this.getAllPrdInStorehouse = async (storehouseId) => {
+            return await this.repository
+                .createQueryBuilder("inventory")
+                .leftJoinAndSelect("inventory.storeHouseId", "storehouse")
+                .select(["inventory.id", "inventory.name", "inventory.costPrice", "inventory.quantity"])
+                .where("storehouse.id = :storeHouseId", { storehouseId })
+                .getMany();
+        };
         this.repository = data_source_1.AppDataSource.getRepository(inventory_1.Inventory);
     }
 }

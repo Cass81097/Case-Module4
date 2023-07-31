@@ -10,8 +10,17 @@ class OrderController{
     }
 
     findAll = async (req: Request, res: Response) => {
-        let object = await this.service.getAll();
-        res.json(object);
+        let {asc, desc} = req.query
+        if (asc === undefined && desc === undefined) {
+            let object = await this.service.getAll();
+            res.json(object);
+        } else if (asc == ''){
+            let object = await this.service.getAllByAsc()
+            res.json(object)
+        } else if (desc == '') {
+            let object = await this.service.getAllByDesc()
+            res.json(object)
+        }
     }
     add = async (req: Request, res: Response) => {
         await this.service.add(req.body);
@@ -29,6 +38,9 @@ class OrderController{
         let object = await this.service.findById(req.params.id)
         res.json(object)
     }
-
+    getAllOrderByUser = async (req: Request, res: Response) => {
+        let object = await this.service.getAllOrderByUserId(req.params.id)
+        res.json(object)
+    }
 }
 export default new OrderController()

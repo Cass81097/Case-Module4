@@ -1,9 +1,10 @@
-import { ListUser } from "./listUser";
-export declare class InfoUser {
+export declare class User {
     id: number;
+    username: string;
+    password: string;
     name: string;
     age: number;
     address: string;
     phone: string;
-    user: ListUser;
+    role: boolean;
 }
