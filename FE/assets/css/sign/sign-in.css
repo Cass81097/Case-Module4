@@ -1,0 +1,20 @@
+.logo {
+    height: 70px;
+    width: 130px;
+}
+
+.logo-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+.invalid {
+    color: red;
+    font-style: italic;
+}
+
+.border-invalid {
+    border: 1px solid red;
+    background-color: #d0d7e052;
+}
