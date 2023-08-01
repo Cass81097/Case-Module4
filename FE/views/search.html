@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- MyCSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/sign/app.css">
+    <link rel="stylesheet" href="../assets/css/sign/chunk1.css">
+    <link rel="stylesheet" href="../assets/css/sign/chunk2.css">
+    <link rel="stylesheet" href="../assets/css/search/styles.css ">
+    <link rel="stylesheet" href="../assets/css/search/my-style.css ">
+
+    <title>Responsive website delivery</title>
+</head>
+
+<body>
+    <div id="__next">
+        <div class="height-screen relative text-white"><span
+                style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:absolute;top:0;left:0;bottom:0;right:0"><img
+                    alt="Tra cứu đơn hàng chỉ với 1 chạm!" sizes="100vw" srcset="../assets/img/home_bg.webp"
+                    src="../assets/img/home_bg.webp" decoding="async" data-nimg="fill" class="object-cover home__bg"
+                    style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"></span>
+            <div class="px-4 mx-auto h-full relative lg:px-0 md:w-[70%] lg:w-[50%] xl:w-[40%] 2xl:w-[30%]">
+                <div class="flex flex-col items-center justify-between h-full">
+
+                    
+                    <div id="search-order" class="weather-data">
+                        <!-- Info Order  -->
+                    </div>
+
+                    <div class="w-full text-center">
+                        <div class="px-8 app__container mt-36">
+                            <p class="whitespace-nowrap mt-2 mb-8 text-3xl md:mb-16 lg:mt-4 app__sub">Tra cứu đơn hàng
+                                chỉ với 1 chạm!</p>
+                        </div>
+                        <label for="tracking_code" class="input__wrapper gap-1 index__form">
+                            <div class="flex w-full items-center flex-1"><span class="input__prefix"><svg width="1.25em"
+                                        height="1.25em" viewBox="0 0 19 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M.835 8.473C.835 4.276 4.251.86 8.448.86c4.197 0 7.613 3.416 7.613 7.613a7.575 7.575 0 0 1-1.697 4.783l-.11.137 4.33 4.4h.002a.624.624 0 1 1-.884.884l-4.333-4.4-.139.112a7.575 7.575 0 0 1-4.782 1.698c-4.197 0-7.613-3.416-7.613-7.614zM8.448 2.11a6.37 6.37 0 0 0-6.363 6.363 6.37 6.37 0 0 0 6.363 6.363 6.37 6.37 0 0 0 6.363-6.363A6.37 6.37 0 0 0 8.448 2.11z"
+                                            fill="#5C5C5C" stroke="#fff" stroke-width="0.2"></path>
+                                    </svg></span><input id="tracking_code" name="tracking_code"
+                                    placeholder="Nhập mã ĐH cần tra cứu" type="search" value="" onchange="searchOrder()"></div>
+                            <div class="flex items-center gap-2 "></div>
+                        </label>
+                    </div>
+                    <div class="mb-4 w-full md:mb-16">
+                        <div class="mt-5 md:mt-7 ">
+                            <div class="flex items-center justify-center gap-2 text-sm sm:text-base lg:text-lg "><a
+                                    href="https://sos.ghtk.vn/" target="_blank" rel="noreferrer"
+                                    class="footer__link "><svg width="1.25em" height="1.25em" viewBox="0 0 24 24"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="!text-white mr-1 text-primary_text">
+                                        <g clip-path="url(#ChatIcon_svg__a)" fill="currentColor">
+                                            <path
+                                                d="M24 16.242a7.776 7.776 0 0 0-5.681-7.475C18.11 3.897 14.084 0 9.164 0 4.111 0 0 4.11 0 9.164c0 1.647.438 3.25 1.27 4.658L.035 18.294l4.472-1.237a9.13 9.13 0 0 0 4.26 1.262A7.776 7.776 0 0 0 16.242 24a7.73 7.73 0 0 0 3.948-1.078l3.776 1.044-1.044-3.776A7.73 7.73 0 0 0 24 16.242zm-19.272-.705-2.677.74.74-2.677-.169-.264a7.731 7.731 0 0 1-1.216-4.172c0-4.278 3.48-7.758 7.758-7.758 4.278 0 7.758 3.48 7.758 7.758 0 4.278-3.48 7.758-7.758 7.758a7.732 7.732 0 0 1-4.172-1.216l-.264-.17zm17.221 6.412-1.986-.55-.266.173a6.328 6.328 0 0 1-3.455 1.022 6.367 6.367 0 0 1-6.021-4.327 9.181 9.181 0 0 0 8.046-8.047 6.368 6.368 0 0 1 4.327 6.022 6.328 6.328 0 0 1-1.022 3.455l-.172.266.55 1.986z">
+                                            </path>
+                                            <path
+                                                d="M5.345 8.29a.546.546 0 1 0 0-1.09.546.546 0 0 0 0 1.09zm8.713-1.09H6.997c-.31 0-.56.244-.56.545 0 .301.25.546.56.546h7.06c.31 0 .561-.245.561-.546a.553.553 0 0 0-.56-.545zm.032 3.818H5.328a.537.537 0 0 0-.528.545c0 .302.236.546.528.546h8.762a.537.537 0 0 0 .528-.546.537.537 0 0 0-.528-.545z">
+                                            </path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="ChatIcon_svg__a">
+                                                <path fill="currentColor" d="M0 0h24v24H0z"></path>
+                                            </clipPath>
+                                        </defs>
+                                    </svg> <span class="!text-white text-primary_text">Chat</span></a>hoặc<a
+                                    href="tel:19006092" class="footer__link"><svg width="1.25em" height="1.25em"
+                                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="!text-white mr-1 text-primary_text">
+                                        <path
+                                            d="M20.203 14.306c-.523-.543-1.155-.833-1.825-.833-.664 0-1.301.285-1.847.828l-1.706 1.694c-.14-.076-.281-.145-.416-.215a7.202 7.202 0 0 1-.535-.285c-1.598-1.011-3.051-2.328-4.444-4.033-.675-.85-1.129-1.564-1.458-2.29.442-.403.853-.823 1.253-1.226l.453-.457c1.134-1.129 1.134-2.591 0-3.72L8.204 2.3c-.168-.167-.34-.339-.502-.51a25.445 25.445 0 0 0-1.016-1C6.162.273 5.536 0 4.877 0S3.581.274 3.041.79l-.01.011-1.837 1.844a3.926 3.926 0 0 0-1.172 2.5c-.13 1.57.335 3.032.691 3.99.875 2.349 2.182 4.526 4.132 6.86 2.365 2.812 5.211 5.032 8.462 6.596 1.242.586 2.9 1.28 4.753 1.398.113.006.232.011.34.011 1.247 0 2.295-.446 3.116-1.333.005-.011.016-.017.021-.027.281-.339.605-.645.946-.973.232-.22.47-.452.701-.694.535-.554.816-1.199.816-1.86 0-.667-.286-1.306-.832-1.844l-2.965-2.962zm1.934 5.662c-.006 0-.006.005 0 0-.21.226-.427.43-.659.656-.351.333-.707.683-1.042 1.075-.546.58-1.188.855-2.03.855-.082 0-.168 0-.25-.006-1.603-.102-3.094-.725-4.211-1.258-3.057-1.473-5.741-3.564-7.972-6.215-1.841-2.21-3.072-4.252-3.888-6.446C1.583 7.29 1.4 6.247 1.48 5.263c.054-.629.297-1.15.746-1.596l1.841-1.834c.265-.247.546-.381.821-.381.34 0 .616.204.788.376l.017.016c.33.307.642.624.972.962.167.172.34.345.513.522l1.474 1.468c.573.57.573 1.096 0 1.666-.157.156-.308.312-.464.463-.454.462-.886.892-1.356 1.312-.01.01-.021.016-.027.026-.464.463-.378.914-.28 1.22l.015.05c.384.924.924 1.795 1.745 2.833l.005.005c1.49 1.828 3.062 3.253 4.796 4.344.221.14.448.253.664.36.194.097.378.188.535.285.021.011.043.027.065.038.183.091.356.134.534.134.448 0 .73-.28.821-.37l1.847-1.84c.183-.182.475-.403.815-.403.335 0 .61.21.778.393l.01.01 2.976 2.963c.557.548.557 1.113.006 1.683z"
+                                            fill="currentColor"></path>
+                                    </svg><span class="!text-white text-primary_text">Gọi 19006092</span></a>để được hỗ
+                                trợ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="app__message"></div>
+        <div id="score-recaptcha" class="g-recaptcha hidden" style="">
+            <div class="grecaptcha-badge" data-style="bottomright"
+                style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;">
+                <div class="grecaptcha-logo"><iframe title="reCAPTCHA"
+                        src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lf4HAAhAAAAAOK0410R60qT6DnBtI-T6mvPGbPB&amp;co=aHR0cHM6Ly9pLmdodGsudm46NDQz&amp;hl=en&amp;v=pCoGBhjs9s8EhFOHJFe8cqis&amp;size=invisible&amp;cb=wbtbm1az1yvv"
+                        width="256" height="60" role="presentation" name="a-y7vuerqelve9" frameborder="0" scrolling="no"
+                        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                </div>
+                <div class="grecaptcha-error"></div><textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                    class="g-recaptcha-response"
+                    style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+            </div><iframe style="display: none;"></iframe>
+        </div>
+    </div>
+
+    <script src="../assets/js/axios/search-order/index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+.logo {
+    height: 70px;
+    width: 130px;
+}
+
+.home {
+    background: #f2f2f2;
+}
+
+.container .nav__logo {
+    display: flex;
+    align-items: center;
+}
+
+.home__container {
+    display: flex;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.container .nav__logo span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.col-sm-5 {
+    margin: auto;
+}
+
+.section-ghtkpo .container {
+    padding: 1.5rem 0 1rem;
+}
+
+.search-location {
+    transform: translateX(160px);
+}
+
+.home__data {
+    width: 50%;
+}

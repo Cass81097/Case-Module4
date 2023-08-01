@@ -1,0 +1,75 @@
+.section-title {
+    color: #333;
+    font-size: 35px;
+    font-weight: 200;
+    margin: 7px 0 25px 0;
+    padding: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.grey-bg {
+    background: #efefef;
+}
+
+.actives ul {
+    list-style: none;
+    font-weight: 400;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+.actives ul li.active-1 {
+    background-image: url(../../img/bkg-active-1.png);
+}
+
+.actives ul li.active-2 {
+    background-image: url(../../img/bkg-active-2.png);
+}
+
+.actives ul li.active-3 { 
+    background-image: url(../../img/bkg-active-3.png);
+}
+
+.actives ul li.active-4 {
+    background-image: url(../../img/bkg-active-4.png);
+}
+
+.actives ul li.active-5 {
+    background-image: url(../../img/bkg-active-5.png);
+}
+
+.actives ul li:first-child {
+    border-left: 0 none;
+}
+
+.actives ul li {
+    background-repeat: no-repeat;
+    background-position: 50% 20px;
+    background-size: 80px auto;
+    border-left: 2px dotted #fff;
+    float: left;
+    min-height: 230px;
+    padding: 100px 15px 20px;
+    text-align: center;
+    width: 20%;
+}
+
+.actives ul li strong {
+    color: #01904a;
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+

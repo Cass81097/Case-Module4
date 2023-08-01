@@ -1,0 +1,18 @@
+Em xong hết phần crud cơ bản rồi a nhé
+Về api thì em chia thành 3 phần chính như sau:
+  1. '/location' : cái này là thằng locationRouter , trong đấy, có 2 thằng con nữa: 
+      1.1. '/list' : dành cho listLocationRouter (*)
+      1.2. '/localpost': dành cho localpostRouter (*)
+ 2. '/products': dành cho productRouter, trong đấy có 3 thằng con: 
+      2.1. '/inventory': dành cho invenRouter (hàng trong kho) (*)
+      2.2. '/order': dành cho thằng orderRouter (đơn hàng) (*)
+      2.3. '/storehouse': dành cho thằng storehouseRouter (kho hàng) (*)
+ 3. '/user': dành cho userRouter, trong đấy có 2 thằng con: 
+      3.1. '/list': dành cho thằng listUserRouter (*)
+      3.2. '/infoUser': dành cho thằng infoUserRouter (*)
+Tất cả những thằng e đánh dấu (*) này đều có các chức năng:
+     Hiện full 1 bảng ( '/', get )  
+     Thêm vào 1 bảng ( '/', post ) 
+     Sửa trong 1 bảng ( '/:id', put )
+     Xóa 1 hàng trong 1 bảng ( '/:id', delete )
+     Hiện theo id trong 1 bảng ( '/:id', get )
